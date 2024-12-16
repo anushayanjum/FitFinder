@@ -1,0 +1,184 @@
+2024-12-11 09:40:29,910 [INFO] Loaded spaCy 'en_core_web_sm' model successfully.
+2024-12-11 09:40:30,507 [INFO] Loaded data from resume.csv successfully.
+2024-12-11 09:40:30,525 [ERROR] CSV file must contain a 'Years_of_Experience' column.
+2024-12-11 09:42:32,010 [INFO] Loaded spaCy 'en_core_web_sm' model successfully.
+2024-12-11 09:42:32,648 [INFO] Loaded data from resume.csv successfully.
+2024-12-11 09:42:32,659 [ERROR] CSV file must contain a 'Years_of_Experience' column.
+2024-12-11 09:44:20,613 [INFO] Loaded spaCy 'en_core_web_sm' model successfully.
+2024-12-11 09:44:21,160 [INFO] Loaded data from resume.csv successfully.
+2024-12-11 09:44:21,208 [INFO] Columns in dataset: ['ID', 'Resume_str', 'Resume_html', 'Category']
+2024-12-11 09:44:21,218 [INFO] 'Years_of_Experience' column not found. Attempting to extract from resume text...
+2024-12-11 09:44:21,553 [INFO] Extracted 'Years_of_Experience' column.
+2024-12-11 09:44:21,588 [INFO] 'Good_Fit' column not found. Creating a dummy 'Good_Fit' column based on 'Category'...
+2024-12-11 09:44:21,590 [INFO] Created 'Good_Fit' column.
+2024-12-11 09:44:21,590 [INFO] All required columns are present in the CSV file.
+2024-12-11 09:44:21,599 [INFO] Preprocessing resumes...
+2024-12-11 09:44:36,112 [INFO] Loaded spaCy 'en_core_web_sm' model successfully.
+2024-12-11 09:44:36,698 [INFO] Loaded data from resume.csv successfully.
+2024-12-11 09:44:36,718 [INFO] Columns in dataset: ['ID', 'Resume_str', 'Resume_html', 'Category']
+2024-12-11 09:44:36,719 [INFO] 'Years_of_Experience' column not found. Attempting to extract from resume text...
+2024-12-11 09:44:37,029 [INFO] Extracted 'Years_of_Experience' column.
+2024-12-11 09:44:37,060 [INFO] 'Good_Fit' column not found. Creating a dummy 'Good_Fit' column based on 'Category'...
+2024-12-11 09:44:37,060 [INFO] Created 'Good_Fit' column.
+2024-12-11 09:44:37,060 [INFO] All required columns are present in the CSV file.
+2024-12-11 09:44:37,060 [INFO] Preprocessing resumes...
+2024-12-11 09:49:43,412 [INFO] Performing feature engineering: Counting skill mentions...
+2024-12-11 09:49:43,589 [INFO] Loading Sentence-BERT model...
+2024-12-11 09:49:43,632 [INFO] Use pytorch device_name: cpu
+2024-12-11 09:49:43,633 [INFO] Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-12-11 09:49:45,038 [INFO] Loaded Sentence-BERT model 'all-MiniLM-L6-v2' successfully.
+2024-12-11 09:49:45,055 [INFO] Embedding all resumes...
+2024-12-11 09:51:33,203 [INFO] Completed embedding resumes.
+2024-12-11 09:51:33,244 [INFO] Top 5 matched resumes:
+2024-12-11 09:51:33,253 [INFO]             ID       Category  Match_Score
+2463  29595906       AVIATION     0.481113
+398   51209395        TEACHER     0.471742
+1686  36094883        APPAREL     0.469292
+1727  21298336    ENGINEERING     0.467693
+1226  16509761  DIGITAL-MEDIA     0.461234
+2024-12-11 09:51:33,265 [INFO] Processing uploaded PDF resume...
+2024-12-11 09:51:33,670 [INFO] Extracted text from PDF: resume.pdf
+2024-12-11 09:51:34,042 [INFO] The uploaded resume match score for a Technology-Junior role: 0.3256
+2024-12-11 09:51:34,076 [INFO] Performing statistical test between Technology and Finance match scores...
+2024-12-11 09:51:34,123 [WARNING] Not enough samples in one of the categories to perform t-test.
+2024-12-11 09:51:34,159 [INFO] Analyzing correlation between Years of Experience and Match Score...
+2024-12-11 09:51:34,211 [INFO] Correlation between Years of Experience and Match Score: -0.0256
+2024-12-11 09:51:34,245 [INFO] Building predictive model to predict 'Good_Fit'...
+2024-12-11 09:51:34,299 [ERROR] Error building predictive model: This solver needs samples of at least 2 classes in the data, but the data contains only one class: 0
+2024-12-11 09:51:34,312 [INFO] Creating data visualizations...
+2024-12-11 09:51:44,190 [INFO] Finalizing and saving results...
+2024-12-11 09:51:45,405 [INFO] Saved ranked resumes to 'ranked_resumes.csv'.
+2024-12-11 09:51:46,762 [INFO] Saved processed resumes to 'processed_resumes.csv'.
+2024-12-11 09:51:46,779 [INFO] Script execution complete!
+2024-12-11 14:22:12,857 [INFO] Loaded spaCy 'en_core_web_sm' model successfully.
+2024-12-11 14:22:13,451 [INFO] Loaded data from CSV successfully.
+2024-12-11 14:22:13,486 [INFO] Preprocessing resumes from dataset...
+2024-12-11 14:27:38,803 [INFO] Loading Sentence-BERT model...
+2024-12-11 14:27:38,850 [INFO] Use pytorch device_name: cpu
+2024-12-11 14:27:38,855 [INFO] Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-12-11 14:27:40,136 [INFO] Encoding dataset resumes with Sentence-BERT...
+2024-12-11 14:29:40,891 [INFO] Extracted text from PDF: resume.pdf
+2024-12-11 14:29:41,258 [INFO] User Resume Suitability Score for Engineering (junior level): 0.2904
+2024-12-11 14:29:41,282 [INFO] T-statistic: 8.3631, P-value: 0.0000
+2024-12-11 14:29:41,288 [INFO] We reject the null hypothesis and conclude there's a significant difference.
+2024-12-11 14:29:41,301 [INFO] Correlation between category numeric encoding and User_Similarity: 0.1011
+2024-12-11 14:29:41,334 [INFO] Classification Report:
+2024-12-11 14:29:41,365 [INFO] 
+              precision    recall  f1-score   support
+
+           0       0.95      1.00      0.98       473
+           1       0.00      0.00      0.00        24
+
+    accuracy                           0.95       497
+   macro avg       0.48      0.50      0.49       497
+weighted avg       0.91      0.95      0.93       497
+
+2024-12-11 14:29:41,399 [INFO] Model AUC: 0.5310
+2024-12-11 14:29:42,372 [INFO] Data visualization saved as 'category_similarity_boxplot.png' and 'roc_curve.png'.
+2024-12-11 14:36:32,594 [INFO] Loaded spaCy 'en_core_web_sm' model successfully.
+2024-12-11 14:36:33,172 [INFO] Loaded data from CSV successfully.
+2024-12-11 14:36:33,210 [INFO] Preprocessing resumes from dataset...
+2024-12-11 14:42:16,051 [INFO] Loading Sentence-BERT model...
+2024-12-11 14:42:16,136 [INFO] Use pytorch device_name: cpu
+2024-12-11 14:42:16,140 [INFO] Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-12-11 14:42:18,240 [INFO] Encoding dataset resumes with Sentence-BERT...
+2024-12-11 14:44:29,397 [INFO] Extracted text from PDF: resume.pdf
+2024-12-11 14:44:30,104 [INFO] User Resume Suitability Score for Information-Technology (junior level): 0.3122
+2024-12-11 14:44:30,433 [INFO] User Resume Information-Technology Skill Count: 11
+2024-12-11 14:44:30,580 [INFO] T-statistic: 8.3631, P-value: 0.0000
+2024-12-11 14:44:30,698 [INFO] We reject the null hypothesis and conclude there's a significant difference.
+2024-12-11 14:44:30,789 [INFO] Correlation between category numeric encoding and User_Similarity: 0.1011
+2024-12-11 14:44:30,914 [INFO] Classification Report:
+2024-12-11 14:44:30,980 [INFO] 
+              precision    recall  f1-score   support
+
+           0       0.96      0.99      0.97       473
+           1       0.45      0.21      0.29        24
+
+    accuracy                           0.95       497
+   macro avg       0.71      0.60      0.63       497
+weighted avg       0.94      0.95      0.94       497
+
+2024-12-11 14:44:31,023 [INFO] Model AUC: 0.9190
+2024-12-11 14:44:33,009 [INFO] Data visualization saved as 'category_similarity_boxplot.png' and 'roc_curve.png'.
+2024-12-11 15:04:07,366 [INFO] Loaded spaCy 'en_core_web_sm' model successfully.
+2024-12-11 15:04:07,950 [INFO] Loaded data from CSV successfully.
+2024-12-11 15:04:08,002 [INFO] Preprocessing resumes from dataset...
+2024-12-11 15:09:46,044 [INFO] Loading Sentence-BERT model...
+2024-12-11 15:09:46,109 [INFO] Use pytorch device_name: cpu
+2024-12-11 15:09:46,112 [INFO] Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-12-11 15:09:47,668 [INFO] Encoding dataset resumes with Sentence-BERT...
+2024-12-11 15:11:49,038 [INFO] Extracted text from PDF: resume.pdf
+2024-12-11 15:11:50,384 [INFO] User Resume Suitability Score for Information-Technology (junior level): 0.3122
+2024-12-11 15:11:50,850 [INFO] User Resume Information-Technology Skill Count: 11
+2024-12-11 15:11:51,510 [INFO] User Resume Experience Level: junior (0 years)
+2024-12-11 15:11:51,650 [INFO] T-statistic: 8.3631, P-value: 0.0000
+2024-12-11 15:11:51,745 [INFO] We reject the null hypothesis and conclude there's a significant difference.
+2024-12-11 15:11:51,815 [INFO] Correlation between category numeric encoding and User_Similarity: 0.1011
+2024-12-11 15:11:51,948 [INFO] Classification Report:
+2024-12-11 15:11:52,041 [INFO] 
+              precision    recall  f1-score   support
+
+           0       0.96      0.99      0.97       473
+           1       0.50      0.25      0.33        24
+
+    accuracy                           0.95       497
+   macro avg       0.73      0.62      0.65       497
+weighted avg       0.94      0.95      0.94       497
+
+2024-12-11 15:11:52,090 [INFO] Model AUC: 0.9142
+2024-12-11 15:11:54,291 [INFO] Data visualization saved as 'category_similarity_boxplot.png' and 'roc_curve.png'.
+2024-12-11 15:22:46,936 [INFO] Loaded spaCy 'en_core_web_sm' model successfully.
+2024-12-11 15:22:47,549 [INFO] Loaded data from CSV successfully.
+2024-12-11 15:22:47,554 [INFO] Preprocessing resumes from dataset...
+2024-12-11 15:28:30,074 [INFO] Loading Sentence-BERT model...
+2024-12-11 15:28:30,175 [INFO] Use pytorch device_name: cpu
+2024-12-11 15:28:30,179 [INFO] Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-12-11 15:28:31,477 [INFO] Encoding dataset resumes with Sentence-BERT...
+2024-12-11 15:30:38,628 [INFO] Extracted text from PDF: resume.pdf
+2024-12-11 15:30:38,937 [INFO] User Resume Suitability Score for Information-Technology (junior level): 0.3122
+2024-12-11 15:30:39,540 [INFO] User Resume Experience Level: junior (0 years)
+2024-12-11 15:30:39,633 [INFO] T-statistic: 8.3631, P-value: 0.0000
+2024-12-11 15:30:39,636 [INFO] We reject the null hypothesis and conclude there's a significant difference.
+2024-12-11 15:30:39,651 [INFO] Correlation between category numeric encoding and User_Similarity: 0.1011
+2024-12-11 15:30:39,898 [INFO] Best threshold found: 0.94 with F1-score for positive class: 0.5882
+2024-12-11 15:30:39,908 [INFO] Classification Report after Threshold Tuning:
+2024-12-11 15:30:39,927 [INFO] 
+              precision    recall  f1-score   support
+
+           0       0.98      0.97      0.98       473
+           1       0.56      0.62      0.59        24
+
+    accuracy                           0.96       497
+   macro avg       0.77      0.80      0.78       497
+weighted avg       0.96      0.96      0.96       497
+
+2024-12-11 15:30:39,940 [INFO] Model AUC: 0.9066
+2024-12-11 15:30:41,657 [INFO] Data visualization saved as 'category_similarity_boxplot.png' and 'roc_curve.png'.
+2024-12-11 16:29:46,163 [INFO] Loaded spaCy 'en_core_web_sm' model successfully.
+2024-12-11 16:29:46,919 [INFO] Loaded data from CSV successfully.
+2024-12-11 16:29:46,926 [INFO] Preprocessing resumes from dataset...
+2024-12-11 16:36:14,610 [INFO] Loading Sentence-BERT model...
+2024-12-11 16:36:14,635 [INFO] Use pytorch device_name: cpu
+2024-12-11 16:36:14,637 [INFO] Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-12-11 16:36:16,595 [INFO] Encoding dataset resumes with Sentence-BERT...
+2024-12-11 16:38:39,921 [INFO] Extracted text from PDF: resume.pdf
+2024-12-11 16:38:40,294 [INFO] User Resume Suitability Score for Information-Technology (junior level): 0.3122
+2024-12-11 16:38:41,214 [INFO] User Resume Experience Level: junior (0 years)
+2024-12-11 16:38:41,313 [INFO] T-statistic: 8.3631, P-value: 0.0000
+2024-12-11 16:38:41,314 [INFO] We reject the null hypothesis and conclude there's a significant difference.
+2024-12-11 16:38:41,337 [INFO] Correlation between category numeric encoding and User_Similarity: 0.1011
+2024-12-11 16:38:41,646 [INFO] Best threshold found: 0.94 with F1-score for positive class: 0.5882
+2024-12-11 16:38:41,647 [INFO] Classification Report after Threshold Tuning:
+2024-12-11 16:38:41,655 [INFO] 
+              precision    recall  f1-score   support
+
+           0       0.98      0.97      0.98       473
+           1       0.56      0.62      0.59        24
+
+    accuracy                           0.96       497
+   macro avg       0.77      0.80      0.78       497
+weighted avg       0.96      0.96      0.96       497
+
+2024-12-11 16:38:41,665 [INFO] Model AUC: 0.9066
+2024-12-11 16:38:42,390 [INFO] Data visualization saved as 'category_similarity_boxplot.png' and 'roc_curve.png'.
